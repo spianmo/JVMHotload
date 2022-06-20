@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="PluginContract:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/PluginContract_jar</output-path>
+    <root id="archive" name="PluginContract.jar">
+      <element id="module-output" name="PluginContract" />
+    </root>
+  </artifact>
+</component>

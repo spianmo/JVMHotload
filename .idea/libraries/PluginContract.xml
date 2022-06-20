@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="PluginContract">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/out/artifacts/PluginContract_jar/PluginContract.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
