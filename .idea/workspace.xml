@@ -7,12 +7,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2252cb82-b3df-45b0-93c7-0063def55d94" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TestPlugin/resources/test.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PluginHotLoad/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/PluginHotLoad/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PluginHotLoad/src/hotload/PluginManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/PluginHotLoad/src/hotload/PluginManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestPlugin/TestPlugin.iml" beforeDir="false" afterPath="$PROJECT_DIR$/TestPlugin/TestPlugin.iml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,11 +71,23 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1655717304761</updated>
-      <workItem from="1655717306316" duration="1487000" />
+      <workItem from="1655717306316" duration="3957000" />
     </task>
+    <task id="LOCAL-00001" summary="feat: 读取插件Jar包的resources资源文件">
+      <created>1655718896623</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1655718896623</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="feat: 读取插件Jar包的resources资源文件" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: 读取插件Jar包的resources资源文件" />
   </component>
 </project>

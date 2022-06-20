@@ -1,6 +1,7 @@
 import hotload.PluginManager;
 
 import java.io.*;
+import java.nio.file.*;
 import java.util.Arrays;
 import java.util.LinkedHashMap;
 import java.util.List;
@@ -9,10 +10,43 @@ import java.util.List;
  * @author Administrator
  */
 public class Main {
-    public static void main(String[] args) throws Exception {
+
+    private static final String PLUGIN_DIR = "e:/IdeaProjects/HotLoad/plugins/";
+
+    public static void watchPluginDir(PluginManager pluginManager) throws InterruptedException, IOException {
+        WatchService watchService = FileSystems.getDefault().newWatchService();
+
+        Paths.get(PLUGIN_DIR).register(
+                watchService,
+                StandardWatchEventKinds.ENTRY_CREATE,
+                StandardWatchEventKinds.ENTRY_DELETE,
+                StandardWatchEventKinds.ENTRY_MODIFY);
+
+        while (true) {
+            WatchKey key=watchService.take();
+            for (WatchEvent<?> event : key.pollEvents()) {
+                System.out.println(
+                        "Event kind:" + event.kind()
+                                + ". Plugin affected: " + event.context() + ".");
+
+                if (!event.context().toString().endsWith(".jar")) continue;
+                if (event.kind().name() == "ENTRY_CREATE") {
+                    pluginManager.load(event.context().toString().substring(0, event.context().toString().indexOf(".jar")));
+                }
+                if (event.kind().name() == "ENTRY_MODIFY") {
+                    pluginManager.reload(event.context().toString().substring(0, event.context().toString().indexOf(".jar")));
+                }
+                if (event.kind().name() == "ENTRY_DELETE") {
+                    pluginManager.unload(event.context().toString().substring(0, event.context().toString().indexOf(".jar")));
+                }
+            }
+            key.reset();
+        }
+    }
+
+    private static void watchCmdLine(PluginManager pluginManager) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         String cmd = br.readLine();
-        PluginManager pluginManager = PluginManager.getInstance("e:/IdeaProjects/HotLoad/plugins/");
 
         while (!"exit".equals(cmd)) {
             String[] argv = cmd.split(" ");
@@ -43,6 +77,27 @@ public class Main {
             }
             cmd = br.readLine();
         }
+    }
+
+    public static void main(String[] args) {
+        PluginManager pluginManager = PluginManager.getInstance(PLUGIN_DIR);
+        new Thread(()->{
+            try {
+                watchPluginDir(pluginManager);
+            } catch (InterruptedException e) {
+                throw new RuntimeException(e);
+            } catch (IOException e) {
+                throw new RuntimeException(e);
+            }
+        }).start();
+
+        new Thread(()->{
+            try {
+                watchCmdLine(pluginManager);
+            } catch (IOException e) {
+                throw new RuntimeException(e);
+            }
+        }).start();
     }
 
     /**
