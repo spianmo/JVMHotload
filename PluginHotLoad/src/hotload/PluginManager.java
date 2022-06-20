@@ -1,5 +1,6 @@
 package hotload;
 
+import java.io.InputStream;
 import java.lang.reflect.Method;
 import java.net.MalformedURLException;
 import java.net.URL;
@@ -62,6 +63,11 @@ public class PluginManager {
         } catch (Exception e) {
             e.printStackTrace();
         }
+    }
+
+    public InputStream getResource(String pluginPackageName, String resourceName) {
+        if (getLoader(pluginPackageName) == null) this.load(pluginPackageName);
+        return getLoader(pluginPackageName).getResourceAsStream(resourceName);
     }
 
     public Object exec(String pluginPackageName, String function, Map argv) {

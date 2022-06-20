@@ -6,7 +6,14 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2252cb82-b3df-45b0-93c7-0063def55d94" name="Changes" comment="" />
+    <list default="true" id="2252cb82-b3df-45b0-93c7-0063def55d94" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TestPlugin/resources/test.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PluginHotLoad/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/PluginHotLoad/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PluginHotLoad/src/hotload/PluginManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/PluginHotLoad/src/hotload/PluginManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestPlugin/TestPlugin.iml" beforeDir="false" afterPath="$PROJECT_DIR$/TestPlugin/TestPlugin.iml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -16,6 +23,9 @@
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="2AprKdaecrpR0YPNbtfU3zYZjBJ" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showModules" value="false" />
@@ -24,16 +34,22 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
     "dart.analysis.tool.window.visible": "false",
-    "last_opened_file_path": "E:/IdeaProjects/HotLoad/out/artifacts/PluginContract_jar/PluginContract.jar",
-    "project.structure.last.edited": "Artifacts",
+    "last_opened_file_path": "E:/IdeaProjects/HotLoad/plugins",
+    "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
     "settings.editor.selected.configurable": "preferences.lookFeel",
     "show.migrate.to.gradle.popup": "false"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\IdeaProjects\HotLoad\plugins" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
@@ -59,7 +75,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1655717304761</updated>
-      <workItem from="1655717306316" duration="615000" />
+      <workItem from="1655717306316" duration="1487000" />
     </task>
     <servers />
   </component>
